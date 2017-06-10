@@ -14,7 +14,8 @@ class PostList extends \Magento\Framework\View\Element\Template implements
         \Magento\Framework\View\Element\Template\Context $context,
         \Ashsmith\Blog\Model\ResourceModel\Post\CollectionFactory $postCollectionFactory,
         array $data = []
-    ) {
+    )
+    {
         parent::__construct($context, $data);
         $this->_postCollectionFactory = $postCollectionFactory;
     }
@@ -31,6 +32,7 @@ class PostList extends \Magento\Framework\View\Element\Template implements
                 );
             $this->setData('posts', $posts);
         }
+        // return $posts;
         return $this->getData('posts');
     }
 
